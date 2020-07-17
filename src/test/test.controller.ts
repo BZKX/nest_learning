@@ -1,7 +1,9 @@
 import { Controller, Get,Post, HttpCode, Req } from '@nestjs/common';
 import { TestService } from './test.service';
 import {Request} from '@nestjs/common';
+import {ApiTags} from '@nestjs/swagger';
 
+@ApiTags('Day 1')
 @Controller('test')
 export class TestController {
   constructor(private readonly testService : TestService) {}
